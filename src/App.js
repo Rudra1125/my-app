@@ -5,13 +5,13 @@ import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, { useState } from 'react'
 import Alert from './components/Alert';
-import About from './components/About';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+// import About from './components/About';
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+  
+// } from "react-router-dom";
 
 
 
@@ -43,21 +43,22 @@ function App() {
   }
   return (
     <>
-      <Router>
+      {/* <Router> */}
         <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode}/>
         <Alert alert={alert}/>
         <div className="container my-3" >
           {/* {/users--> component 1} */}
           {/* /users/home --->-->component 2 */}
           {/* React uses partial matching so we have to use exact keyword to match exactly */}
-          <Routes>
+          {/* <Routes>
             <Route exact path="/about" element={<About />}>
-            </Route>
-            <Route exact path="/" element={<TextForm heading="Enter text to analyze"  mode={mode} showAlert={showAlert} />}>
-            </Route>
-          </Routes>
+            </Route> */}
+            <TextForm heading="Enter text to analyze"  mode={mode} showAlert={showAlert}/> 
+            {/* <Route exact path="/" element={}> */}
+            {/* </Route> */}
+          {/* </Routes> */}
         </div>
-      </Router>  
+      {/* </Router>   */}
     </>
   );
 }
